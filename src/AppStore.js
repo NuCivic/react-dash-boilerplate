@@ -4,6 +4,7 @@ import {initialState} from './initialState';
 import {datum} from './datum';
 import Immutable from 'immutable';
 
+console.log("AppStore, Datum", datum);
 class AppStore extends DashboardStore {
 
   // This is an example about how to perfor async operations
@@ -40,7 +41,8 @@ class AppStore extends DashboardStore {
   }
 
   getData(action) {
-    this.updateComponentState(action.id, 'data', datum);
+    console.log("gtd", action.id, datum[0].values);
+    this.updateComponentState(action.id, 'data', datum[0].values);
   }
 
   // Every event triggered by the dispatcher will be

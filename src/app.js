@@ -11,7 +11,7 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
-
+    console.log('DATUM',datum, AppStore.getState());
     // Let's set the initial state and populate the data array with
     // some dummy data.
     this.state = Object.assign({data: datum}, AppStore.getState());
