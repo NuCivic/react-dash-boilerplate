@@ -1,34 +1,49 @@
-/* eslint-disable no-var */
-var webpack = require('webpack');
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
+  devtool: 'eval',
   entry: [
-    './src/index'
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src/index.js'
   ],
   output: {
-    path: __dirname + '/src/App.js',
-    library: 'react-dashbaord-example',
-    libraryTarget: 'umd',
-    filename: 'dist/bundle.js',
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  devtool: 'eval-source-map',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
+        include: path.resolve(__dirname, 'src/'),
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: "file-loader" }
+      {
+        test: /\.css$/,
+        include: [
+          path.resolve(__dirname, 'src/'),
+          path.resolve(__dirname, 'node_modules/')
+        ],
+        loader: "style-loader!css-loader"
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        include: [
+          path.resolve(__dirname, 'src/'),
+          path.resolve(__dirname, 'node_modules/')
+        ],
+        loader: "file-loader"
+      },
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/'),
+        loaders: ['style', 'css', 'sass']
+      }
     ]
   }
 };
