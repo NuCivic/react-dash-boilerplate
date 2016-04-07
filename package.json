@@ -7,7 +7,7 @@
     "start": "node server.js",
     "build_dkan": "./scripts/build_dkan.sh",
     "build_standalone": "./scripts/build_standalone.sh",
-    "dev_dkan": "./scripts/dev_standalone.sh",
+    "dev_dkan": "./scripts/dev_dkan.sh",
     "dev_standalone": "./scripts/dev_standalone.sh",
     "test": "./node_modules/karma/bin/karma start --single-run --no-auto-watch karma.config.js",
     "test_watch": "./node_modules/karma/bin/karma start --auto-watch --no-single-run karma.config.js",
