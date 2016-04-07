@@ -1,3 +1,5 @@
+import {timeFormat as d3_timeFormat} from 'd3-time-format';
+
 export var settings = {
   title: 'Georgia Reports',
   regions: {
@@ -16,17 +18,21 @@ export var settings = {
         iconClass: 'glyphicon glyphicon-tree-conifer',
         settings: {
           id:'lineChart2',
-          type: 'discreteBarChart',
-          x: 'label',
-          y: 'value',
+          type: 'lineChart',
+          x: 'date',
+          y: 'price',
           height: 340,
           margin: {
             left: 38
           },
-          color: ['#EA7E7E']
+          color: ['#EA7E7E'],
+          xAxis: {
+            tickFormat: d3_timeFormat('%Y')
+          }
         },
         cardStyle: 'card',
         fetchData: {type:'function', name: 'getData'},
+
       }
     ],
     middleFirst: [
@@ -154,16 +160,19 @@ export var settings = {
         type: 'GAChart',
         settings: {
           id:'lineChart',
-          type: 'discreteBarChart',
-          x: 'label',
-          y: 'value',
+          type: 'lineChart',
+          x: 'date',
+          y: 'price',
           height: 300,
           margin: {
             left: 38
           },
+          xAxis: {
+            tickFormat: d3_timeFormat('%Y')
+          }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getData'}
       },
       {
         type: 'GATable',
@@ -209,14 +218,17 @@ export var settings = {
         iconClass: 'glyphicon glyphicon-exclamation-sign',
         settings: {
           id:'barChart',
-          type: 'discreteBarChart',
-          x: 'label',
-          y: 'value',
+          type: 'lineChart',
+          x: 'date',
+          y: 'price',
           height: 300,
           margin: {
             left: 38
           },
-          color: ['#82899B']
+          color: ['#82899B'],
+          xAxis: {
+            tickFormat: d3_timeFormat('%Y')
+          }
         },
         cardStyle: 'card',
         fetchData: {type:'function', name: 'getData'},
