@@ -33,6 +33,36 @@ export var settings = {
         cardStyle: 'card',
         fetchData: {type:'function', name: 'getData'},
 
+      },
+      {
+        header: 'GAChoropleth Test',
+        type: 'GAChoropleth',
+        settings: {
+          colors:['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'pink','violet', 'darkmagenta'],
+          cssPath: '/static/choropleth.css',
+          showTooltip: {true},
+          domainField: 'rate',
+          levels: 9,
+          domainLower: 0,
+          domainUpper: .15,
+          legendHeader: "Per Cent Unemploytment by U.S. County",
+          width: 1200,
+          height: 600,
+          domainKey: 'id',
+          dataset: {
+            backend: 'csv',
+            url: '/data/unemployment.tsv',
+            delimiter: '\t'
+          },
+          mapFormat: 'topojson',
+          mapDataUrl: '/data/us.json',
+          polygon: 'counties',
+          mesh: 'states',
+          projection: 'albersUsa',
+          showGraticule: true
+        },
+        cardStyle: 'card',
+        fetchData: {type:'function', name: 'getData'},
       }
     ],
     middleFirst: [
