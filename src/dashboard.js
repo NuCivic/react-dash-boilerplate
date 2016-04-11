@@ -9,8 +9,12 @@ export default class GADashboard extends Dashboard {
     this.state = {data: []};
   }
 
-  onAutocompleteChange(payload) {
-    console.log(payload.value);
+  onAction(payload) {
+    switch(payload.actionType) {
+      case 'AUTOCOMPLETE_CHANGE':
+        console.log('AUTOCOMPLETE_CHANGE');
+        break;
+    }
   }
 
 }

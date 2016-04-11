@@ -8,8 +8,7 @@ export var settings = {
         type: 'Autocomplete',
         name: 'some-name',
         multi: true,
-        url: 'http://localhost:3004/options?q={{keyword}}',
-        onChange: 'onAutocompleteChange',
+        options: [{ value: 'one', label: 'One' }, { value: 'two', label: 'Two' }],
         cardStyle: 'none'
       },
       {
