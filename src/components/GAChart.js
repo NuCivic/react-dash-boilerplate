@@ -18,7 +18,7 @@ export default class GAChart extends Chart {
    * calls (e.g. you are returning data derived from the globalData) you need to return
    * a value.
    */
-  getData() {
+  getCustomData() {
     return new Promise(function(resolve, reject) {
       CSV.fetch({url:'http://demo.getdkan.com/node/9/download'})
       .then((data) => {

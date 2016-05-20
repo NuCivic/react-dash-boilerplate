@@ -30,7 +30,7 @@ export var settings = {
           }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getCustomData'},
 
       },
       {
@@ -61,7 +61,7 @@ export var settings = {
           showGraticule: true
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getCustomData'},
       }
     ],
     middleFirst: [
@@ -126,7 +126,7 @@ export var settings = {
         spline: {
           height: 50,
         },
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getCustomData'},
         metric: 'getRandomMetric'
       }
     ],
@@ -152,7 +152,7 @@ export var settings = {
         spline: {
           height: 50,
         },
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getCustomData'},
         metric: 'getRandomMetric'
       }
     ],
@@ -178,7 +178,7 @@ export var settings = {
         spline: {
           height: 50,
         },
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getCustomData'},
         metric: 'getRandomMetric'
       }
     ],
@@ -201,7 +201,7 @@ export var settings = {
           }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'}
+        fetchData: {type:'function', name: 'getCustomData'}
       },
       {
         type: 'GATable',
@@ -260,7 +260,7 @@ export var settings = {
           }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
+        fetchData: {type:'function', name: 'getCustomData'},
       },
       {
         header: 'This is an awesome text',

@@ -6,7 +6,7 @@ import topodata from 'json!../../data/us.json';
 import domainData from 'dsv?delimiter=\t!../../data/unemployment.tsv';
 
 export default class GAChoropleth extends Choropleth {
-  getData() {
+  getCustomData() {
     return {
       topodata: topodata,
       domainData: domainData
