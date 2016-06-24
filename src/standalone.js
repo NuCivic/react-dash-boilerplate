@@ -29,7 +29,6 @@ import { settings } from './settings';
  *
  */
 import GAChart from './components/GAChart';
-import GAChoropleth from './components/GAChoropleth';
 import GATable from './components/GATable';
 import GAMetric from './components/GAMetric';
 import GAGoal from './components/GAGoal';

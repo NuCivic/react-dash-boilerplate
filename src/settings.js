@@ -1,4 +1,4 @@
-import {timeFormat as d3_timeFormat} from 'd3-time-format';
+import {dateFormatter} from 'react-dashboard';
 
 export var settings = {
   title: 'Georgia Reports',
@@ -26,7 +26,7 @@ export var settings = {
           },
           color: ['#EA7E7E'],
           xAxis: {
-            tickFormat: d3_timeFormat('%Y')
+            tickFormat: dateFormatter('%Y')
           }
         },
         cardStyle: 'card',
@@ -34,35 +34,37 @@ export var settings = {
 
       },
       {
-        header: 'GAChoropleth Test',
-        type: 'GAChoropleth',
-        settings: {
-          colors:['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'pink','violet', 'darkmagenta'],
-          cssPath: '/static/choropleth.css',
-          showTooltip: {true},
-          domainField: 'rate',
-          levels: 9,
-          domainLower: 0,
-          domainUpper: .15,
-          legendHeader: "Per Cent Unemploytment by U.S. County",
-          width: 1200,
-          height: 600,
-          domainKey: 'id',
-          dataset: {
-            backend: 'csv',
-            url: '/data/unemployment.tsv',
-            delimiter: '\t'
-          },
-          mapFormat: 'topojson',
-          mapDataUrl: '/data/us.json',
-          polygon: 'counties',
-          mesh: 'states',
-          projection: 'albersUsa',
-          showGraticule: true
+        type: 'Choropleth',
+        format: 'geojson',
+        fetchData: {
+          url: '/data/apollo-parsed-1737-325_0.csv',
+          type: 'backend',
+          backend: 'csv',
+          // delimiter: '\t'
         },
-        cardStyle: 'card',
-        fetchData: {type:'function', name: 'getCustomData'},
-      }
+        id: 'Choropleth',
+        dataKeyField: 'Zone',
+        dataValueField: 'Total Observers',
+        geometryKeyField: 'name',
+        geometry: '/data/zones.geojson', // topojson or geojson
+        projection: 'equirectangular', // https://github.com/d3/d3/wiki/Geo-Projections
+        scaleDenominator: .7,
+        borderColor: '#000000',
+        noDataColor: '#F3F3F3',
+        startColor: 'red',
+        endColor: 'yellow',
+        dataClassification: 'equidistant',
+        legend: {
+          classesCount: 5,
+          palleteKey: 'GnBu',
+          pallete: ['#f0f9e8', '#bae4bc', '#7bccc4', '#43a2ca', '#0868ac'],
+          domainStartValue: '',
+          domainEndValue: '',
+        }
+        // customMin: '',
+        // customMax: '',
+        // topologyObject: 'counties'
+      },
     ],
     middleFirst: [
       {
@@ -197,7 +199,7 @@ export var settings = {
             left: 38
           },
           xAxis: {
-            tickFormat: d3_timeFormat('%Y')
+            tickFormat: dateFormatter('%Y')
           }
         },
         cardStyle: 'card',
@@ -256,7 +258,7 @@ export var settings = {
           },
           color: ['#82899B'],
           xAxis: {
-            tickFormat: d3_timeFormat('%Y')
+            tickFormat: dateFormatter('%Y')
           }
         },
         cardStyle: 'card',
