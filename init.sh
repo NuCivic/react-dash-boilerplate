@@ -40,7 +40,7 @@ mkdir src
 cp -r $DEST_DIR/examples/ src
 
 # update import statements
-find src -type f -exec sed -i -e -E "s/\.\.\/\.\.\/src(.*)/react-dashboard'/g" {} \;
+find src -type f -exec sed -i '' -E "s/\.\.\/\.\.\/src(.*)/react-dashboard'/g" {} \;
 find src -type f -exec grep 'react-dashboard' {} \;
 ##      replace `from ../../src` style imports with import statements with  `from react-dash` style imports
 
