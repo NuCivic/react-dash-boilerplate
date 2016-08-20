@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import {Registry, Table, Dataset} from 'react-dashboard';
+import Registry from 'react-dash'
+import Table from 'react-dash'
+import Dataset from 'react-dash'
 
 export default class GATable extends Table {
+
 
 }
 

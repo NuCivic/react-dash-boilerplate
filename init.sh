@@ -40,9 +40,17 @@ mkdir src
 cp -r $DEST_DIR/examples/ src
 
 # update import statements
-find src -type f -exec sed -i '' -E "s/\.\.\/\.\.\/src(.*)/react-dashboard'/g" {} \;
-find src -type f -exec grep 'react-dashboard' {} \;
-##      replace `from ../../src` style imports with import statements with  `from react-dash` style imports
+# @@TODO - we should update react-dash lib to handle all imports via ../src/ReactDashboard then just rewrite that
+find src -type f -exec sed -i '' -E "s/\.\.\/\.\.\/src(.*)/react-dash'/g" {} \;
+find src -type f -exec sed -i '' -E "s/\.\.\/src(.*)/react-dash'/g" {} \;
+find src -type f -exec sed -i '' -E "s/\.\.\/src/ReactDashboard/react-dash'/g" {} \;
+
+find src -type f -exec grep 'react-dash' {} \;
+
+# move resources to src folder
+echo "Moving resources to /src folder"
+cp -r resources/ src/
+cp lib/dist/react-dashboard.min.css src/
 
 # add README
 touch ./src/README.md

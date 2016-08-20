@@ -1,5 +1,6 @@
 import React from 'react';
-import {Layout, Registry} from 'react-dashboard';
+import Layout from 'react-dash'
+import Registry from 'react-dash'
 
 export default class MyCustomLayout extends Layout {
   render() {

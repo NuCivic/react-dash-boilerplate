@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Registry, Goal} from 'react-dashboard';
+import Registry from 'react-dash'
+import Goal from 'react-dash'
 import last from 'lodash/last';
 
 export default class GAGoal extends Goal {

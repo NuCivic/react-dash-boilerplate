@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'nvd3/build/nv.d3.min.css';
 import 'react-select/dist/react-select.min.css';
 import 'fixed-data-table/dist/fixed-data-table.min.css';
-import 'react-dashboard/dist/react-dashboard.min.css';
+import 'react-dashboard.min.css';
 
 
 /**
@@ -33,7 +33,7 @@ import GATable from './components/GATable';
 import GAMetric from './components/GAMetric';
 import GAGoal from './components/GAGoal';
 import MyCustomLayout from './layouts/MyCustomLayout';
-import GADashboard from './dashboard';
+import GADashboard from './app';
 
 /**
  * This renders the GADAshboard
