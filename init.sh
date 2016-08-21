@@ -48,7 +48,8 @@ find src -type f -exec sed -i '' -E "s/\.\.\/src(.*)/react-dash'/g" {} \;
 echo "C"
 #find src -type f -exec sed -i '' -E "s/import\s(\w+.*)\sfrom 'react-dash'/import { \1 } from 'react-dash'/g" {} \;
 find src -type f -exec sed -i '' -E "s/import(.*)from 'react-dash'/import {\1} from 'react-dash'/g" {} \;
-
+# rewrite "{ { library } }" as "{ library }"
+find src -type f -exec sed -i '' -E "s/import { {(.*)} }/import { \1 }/g" {} \; 
 # @@DEBUG- show new import statements
 
 echo "D"
