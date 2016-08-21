@@ -3,7 +3,7 @@ REACT_DASH_REPO_TAG=$1
 REACT_DASH_REPO="https://github.com/NuCivic/react-dashboard.git"
 DEST_DIR="lib"
 TIMESTAMP=$( date +%s )
-
+alias sed=/usr/local/Cellar/gnu-sed/4.2.2/bin/sed
 # make a backup directory
 if [ ! -d backups ]; then
     echo "Creating backup directory"
@@ -41,13 +41,19 @@ cp -r $DEST_DIR/examples/ src
 
 # update import statements
 # @@TODO - we should update react-dash lib to handle all imports via ../src/ReactDashboard then just rewrite that
+echo "A"
 find src -type f -exec sed -i '' -E "s/\.\.\/\.\.\/src(.*)/react-dash'/g" {} \;
+echo "B"
 find src -type f -exec sed -i '' -E "s/\.\.\/src(.*)/react-dash'/g" {} \;
-find src -type f -exec sed -i '' -E "s/\.\.\/src/ReactDashboard/react-dash'/g" {} \;
+echo "C"
+#find src -type f -exec sed -i '' -E "s/import\s(\w+.*)\sfrom 'react-dash'/import { \1 } from 'react-dash'/g" {} \;
+find src -type f -exec sed -i '' -E "s/import(.*)from 'react-dash'/import {\1} from 'react-dash'/g" {} \;
 
-find src -type f -exec grep 'react-dash' {} \;
+# @@DEBUG- show new import statements
 
+echo "D"
 # move resources to src folder
+find src -type f -exec grep 'react-dash' {} \;
 echo "Moving resources to /src folder"
 cp -r resources/ src/
 cp lib/dist/react-dashboard.min.css src/

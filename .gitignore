@@ -4,4 +4,4 @@ bower_components
 .DS_Store
 dist
 lib
-src
+src/*
