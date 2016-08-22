@@ -31,8 +31,9 @@
   },
   "homepage": "https://github.com/mvader/react-es6-webpack-karma-boilerplate",
   "dependencies": {
-    "react-dashboard": "git+ssh://git@github.com/NuCivic/react-dashboard.git#choropleth_component",
+    "blacklist": "^1.1.4",
     "react": "*",
+    "react-dashboard": "git+ssh://git@github.com/NuCivic/react-dashboard.git#choropleth_component",
     "react-dom": "*"
   },
   "devDependencies": {
