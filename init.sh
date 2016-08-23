@@ -23,18 +23,14 @@ cp -r node_modules/react-dash/examples/ src
 
 # update import statements
 # @@TODO - we should update react-dash lib to handle all imports via ../src/ReactDashboard then just rewrite that
-echo "A"
 find src -type f -exec sed -i '' -E "s/\.\.\/\.\.\/src(.*)/react-dash'/g" {} \;
-echo "B"
 find src -type f -exec sed -i '' -E "s/\.\.\/src(.*)/react-dash'/g" {} \;
-echo "C"
 #find src -type f -exec sed -i '' -E "s/import\s(\w+.*)\sfrom 'react-dash'/import { \1 } from 'react-dash'/g" {} \;
 find src -type f -exec sed -i '' -E "s/import(.*)from 'react-dash'/import {\1} from 'react-dash'/g" {} \;
 # rewrite "{ { library } }" as "{ library }"
 find src -type f -exec sed -i '' -E "s/import { {(.*)} }/import { \1 }/g" {} \; 
 # @@DEBUG- show new import statements
 
-echo "D"
 # move resources to src folder
 find src -type f -exec grep 'react-dash' {} \;
 echo "Moving resources to /src folder"
