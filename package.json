@@ -31,8 +31,9 @@
   },
   "homepage": "https://github.com/mvader/react-es6-webpack-karma-boilerplate",
   "dependencies": {
+    "blacklist": "^1.1.4",
     "react": "*",
-    "react-dash": "^0.3.5",
+    "react-dash": "^0.3.6",
     "react-dom": "*"
   },
   "devDependencies": {

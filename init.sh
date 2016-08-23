@@ -39,7 +39,7 @@ echo "D"
 find src -type f -exec grep 'react-dash' {} \;
 echo "Moving resources to /src folder"
 cp -r resources/ src/
-cp lib/dist/react-dashboard.min.css src/
+cp node_modules/react-dash/dist/react-dashboard.min.css src/
 
 # add README
 touch ./src/README.md
