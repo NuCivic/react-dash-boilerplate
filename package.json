@@ -33,7 +33,7 @@
   "dependencies": {
     "blacklist": "^1.1.4",
     "react": "*",
-    "react-dashboard": "git+ssh://git@github.com/NuCivic/react-dashboard.git#choropleth_component",
+    "react-dash": "^0.3.3",
     "react-dom": "*"
   },
   "devDependencies": {
@@ -48,10 +48,11 @@
     "babel-runtime": "^6.6.1",
     "css-loader": "^0.23.1",
     "eslint-plugin-react": "^3.6.2",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "jasmine-core": "^2.3.4",
     "json-loader": "^0.5.4",
-    "json-server": "^0.8.9",
+    "json-server": "^0.8.18",
     "karma": "^0.13.3",
     "karma-coverage": "^0.4.2",
     "karma-jasmine": "^0.3.6",
@@ -65,7 +66,6 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.12.1",
-    "extract-text-webpack-plugin": "^1.0.1"
+    "webpack-dev-server": "^1.12.1"
   }
 }
