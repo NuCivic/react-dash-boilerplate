@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "init": "./scripts/init.sh",
     "build_dkan": "./scripts/build_dkan.sh",
     "build_standalone": "./scripts/build_standalone.sh",
     "dev_dkan": "./scripts/dev_dkan.sh",
@@ -32,9 +33,15 @@
   "homepage": "https://github.com/mvader/react-es6-webpack-karma-boilerplate",
   "dependencies": {
     "blacklist": "^1.1.4",
+    "bootstrap": "^3.3.7",
+    "d3": "^4.2.8",
+    "fixed-data-table": "^0.6.3",
+    "lodash": "^4.16.4",
     "react": "*",
-    "react-dash": "^0.3.6",
-    "react-dom": "*"
+    "react-dash": "^0.4.0",
+    "react-dom": "*",
+    "react-router": "^2.8.1",
+    "react-select": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
