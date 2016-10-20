@@ -25,7 +25,7 @@ if(MODE === 'production') {
 }
 
 module.exports = {
-  entry: './src/standalone',
+  entry: './src/index',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.min.js',
