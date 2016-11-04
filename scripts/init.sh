@@ -1,5 +1,5 @@
 #!/bin/bash
-REACT_DASH_REPO="https://github.com/NuCivic/react-dashboard.git"
+REACT_DASH_REPO="https://github.com/NuCivic/react-dash.git"
 TIMESTAMP=$( date +%s )
 # use gnu sed in osx
 DASH_LIB_NAME='react-dash-dev'
