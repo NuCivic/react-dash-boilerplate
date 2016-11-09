@@ -2,7 +2,7 @@
 REACT_DASH_REPO="https://github.com/NuCivic/react-dash.git"
 TIMESTAMP=$( date +%s )
 # use gnu sed in osx
-DASH_LIB_NAME='react-dash-dev'
+DASH_LIB_NAME='react-dash'
 
 # alias sed=/usr/local/Cellar/gnu-sed/4.2.2/bin/sed
 
@@ -11,7 +11,7 @@ echo ARGS $1
 
 # make a backup directory
 if [ ! -d backups ]; then
-    echo "Creating backup directory"
+   echo "Creating backup directory"
     mkdir backups
 fi
 
@@ -34,7 +34,7 @@ find src -type f -exec sed -i -E "s/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
 find src -type f -exec sed -i -E "s/import(.*)from 'react-dash'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 find src -type f -exec sed -i -E "s/import(.*)from '$DASH_LIB_NAME'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 # rewrite "{ { library } }" as "{ library }"
-find src -type f -exec sed -i -E "s/\{ \{(.*)\} \}/\{\1\}/g" {} \; 
+find src -type f -exec sed -i -E "s/\{ \{(.*)\} \}/\1/g" {} \; 
 echo 444444444
 
 # move resources to src folder
