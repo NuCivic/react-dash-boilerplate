@@ -34,7 +34,6 @@
   "dependencies": {
     "blacklist": "^1.1.4",
     "bootstrap": "^3.3.7",
-    "d3": "^4.2.8",
     "fixed-data-table": "^0.6.3",
     "lodash": "^4.16.4",
     "react": "*",
