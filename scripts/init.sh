@@ -1,13 +1,7 @@
 #!/bin/bash
 REACT_DASH_REPO="https://github.com/NuCivic/react-dash.git"
 TIMESTAMP=$( date +%s )
-# use gnu sed in osx
 DASH_LIB_NAME='react-dash'
-
-# alias sed=/usr/local/Cellar/gnu-sed/4.2.2/bin/sed
-
-echo Working Directory: $PWD
-echo ARGS $1
 
 # make a backup directory
 if [ ! -d backups ]; then
@@ -28,14 +22,12 @@ mkdir src
 cp -r node_modules/$DASH_LIB_NAME/examples/* src
 
 # update import statements
-# @@TODO - we should update react-dash lib to handle all imports via ../src/ReactDashboard then just rewrite that
-find src -type f -exec sed -i -E "s/\.\.\/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
-find src -type f -exec sed -i -E "s/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
-find src -type f -exec sed -i -E "s/import(.*)from 'react-dash'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
-find src -type f -exec sed -i -E "s/import(.*)from '$DASH_LIB_NAME'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
+find src -type f -exec perl -p -i -e "s/\.\.\/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
+find src -type f -exec perl -p -i -e "s/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
+#find src -type f -exec perl -p -i -e "s/import(.*)from 'react-dash'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
+#find src -type f -exec sed -i -E "s/import(.*)from '$DASH_LIB_NAME'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 # rewrite "{ { library } }" as "{ library }"
 find src -type f -exec sed -i -E "s/\{ \{(.*)\} \}/\1/g" {} \; 
-echo 444444444
 
 # move resources to src folder
 find src -type f -exec grep "$DASH_LIB_NAME" {} \;
