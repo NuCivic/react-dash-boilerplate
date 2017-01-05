@@ -11,8 +11,9 @@ Use the project in /src as a starting place for your new dash project.
 * clone this repository
 * `cd react-dash-boilerplate`
 * `npm install`
+* `npm run init`
 * `npm run dev_standalone`
-* visit localhost:5000
+* visit localhos  t:5000
 
 ## Development
 See README documentation at https://github.com/NuCivic/react-dash
