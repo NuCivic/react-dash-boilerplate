@@ -10,8 +10,8 @@ Use the project in /src as a starting place for your new dash project.
 ## Instructions:
 * clone this repository
 * `cd react-dash-boilerplate`
-* npm install
-* npm run dev_standalone
+* `npm install`
+* `npm run dev_standalone`
 * visit localhost:5000
 
 ## Development
