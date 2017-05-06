@@ -16,7 +16,12 @@ visit localhost:5000
 npm run dev
 ```
 
-Once you have this working you are on your own. Delete the .git folder and create your own repository for your new react-dash project. May the force be with you. 
+Take a look in the `/src`.
+That's the sauce.
+Try changing stuff in `settings.js`.
+Watch the wheels turn.
+Delete the .git folder and create your own repository for your new react-dash project.
+May the force be with you!
 
 ## Build
 ```
@@ -35,4 +40,5 @@ Complete react-dash project documentation:
 http://react-dashboard.readthedocs.io/en/latest/
 
 ## Contribute!
+Questions? Issues? Bugs? Improvements? Contribute!
 https://github.com/NuCivic/react-dash
