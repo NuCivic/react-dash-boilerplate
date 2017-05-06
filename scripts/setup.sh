@@ -27,7 +27,7 @@ find src -type f -exec perl -p -i -e "s/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
 #find src -type f -exec perl -p -i -e "s/import(.*)from 'react-dash'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 #find src -type f -exec sed -i -E "s/import(.*)from '$DASH_LIB_NAME'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 # rewrite "{ { library } }" as "{ library }"
-find src -type f -exec sed -i -E "s/\{ \{(.*)\} \}/\1/g" {} \; 
+find src -type f -exec bin/sed -i -E "s/\{ \{(.*)\} \}/\1/g" {} \; 
 
 # move resources to src folder
 find src -type f -exec grep "$DASH_LIB_NAME" {} \;

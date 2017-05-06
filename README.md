@@ -1,27 +1,21 @@
-# React-Dashboard Boilerplate
-This uses the init.sh script to dynamically generate the boilerplate project from the current node_modules/react-dash/examples folder
-
-In this way, you can use the react-dashboard-boilerplate module to set up a starter project at the current npm tag for react-dash (default) OR you can tweak the version information and set up a boilerplate project for a previous version.
-
 ## Requirements
 - nodejs
 - webpack
-- sed
 
 ## Instructions:
->> npm install
->> ./init.sh
->> npm run dev_standalone
->> visit localhost:5000
+`npm install`
+`npm run setup`
+`npm run dev`
+
+visit localhost:5000
 
 ## Development
-See README documentation at https://github.com/NuCivic/react-dashboard
-Once you have this working you are on your own. Delete the .git folder and create your own repository. 
+`npm run dev`
+
+Once you have this working you are on your own. Delete the .git folder and create your own repository for your new react-dash project. May the force be with you. 
 
 ## Build
-```
-npm run build_standalone
-```
+`npm run build_standalone`
 
 This will output two different files: 
 
@@ -30,3 +24,9 @@ dist/build.min.css
 dist/build.min.js
 ```
 
+## Deeper
+Complete project documentation:
+http://react-dashboard.readthedocs.io/en/latest/
+
+## Contribute!
+https://github.com/NuCivic/react-dash
