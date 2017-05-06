@@ -16,14 +16,15 @@ visit localhost:5000
 npm run dev
 ```
 
-Take a look in the `/src`.
-That's the sauce.
+Take a look in the `/src` folder.
+That's the sauce!
 Try changing stuff in `settings.js`.
-Watch the wheels turn.
+Watch the wheels turn!
 Delete the .git folder and create your own repository for your new react-dash project.
 May the force be with you!
 
 ## Build
+To compile your project, run:
 ```
 npm run build
 ```
