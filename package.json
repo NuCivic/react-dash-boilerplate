@@ -1,7 +1,7 @@
 {
-  "name": "react-es6-webpack-karma-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for kick starting a React Project with ES6 (Babel) and Hot reloader using Webpack and Karma test runner.",
+  "name": "react-dash-boilerplate",
+  "version": "0.6.0",
+  "description": "Boilerplate for starting a react-dash project.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -15,21 +15,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mvader/react-es6-webpack-karma-boilerplate.git"
+    "url": "https://github.com/NuCivic/react-dash"
   },
   "keywords": [
     "react",
     "es6",
     "babel",
-    "webpack",
-    "karma"
+    "react-dash",
+    "data",
+    "visualization",
+    "dashboard",
+    "d3",
+    "nvd3",
+    "chart",
+    "graph",
+    "map",
+    "choropleth"
   ],
-  "author": "Miguel Molina (http://mvader.me)",
+  "author": "Paul Walker",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mvader/react-es6-webpack-karma-boilerplate/issues"
+    "url": "https://github.com/NuCivic/react-dash"
   },
-  "homepage": "https://github.com/mvader/react-es6-webpack-karma-boilerplate",
   "dependencies": {
     "blacklist": "^1.1.4",
     "bootstrap": "^3.3.7",
