@@ -43,7 +43,7 @@
     "fixed-data-table": "^0.6.3",
     "lodash": "^4.16.4",
     "react": "*",
-    "react-dash": "0.6.x",
+    "react-dash": "0.6.x-rc",
     "react-dom": "*",
     "react-router": "^2.8.1",
     "react-select": "^1.0.0-rc.2"
