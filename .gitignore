@@ -4,5 +4,6 @@ bower_components
 .DS_Store
 dist
 lib
+data
 src/*
 backups/*
