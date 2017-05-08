@@ -6,7 +6,6 @@ SED="sed"
 if [ "$(uname)" == "Darwin" ]; then
   SED="./bin/gsed"
 fi
-echo $SED
 
 # make a backup directory
 if [ ! -d backups ]; then
