@@ -40,10 +40,12 @@
   "dependencies": {
     "blacklist": "^1.1.4",
     "bootstrap": "^3.3.7",
+    "create-react-class": "^15.5.2",
     "fixed-data-table": "^0.6.3",
     "lodash": "^4.16.4",
     "react": "*",
-    "react-dash": "0.6.x-rc",
+    "react-create-class": "^1.0.0",
+    "react-dash": "0.6.11",
     "react-dom": "*",
     "react-router": "^2.8.1",
     "react-select": "^1.0.0-rc.2"
