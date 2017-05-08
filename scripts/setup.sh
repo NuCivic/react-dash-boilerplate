@@ -2,6 +2,11 @@
 REACT_DASH_REPO="https://github.com/NuCivic/react-dash.git"
 TIMESTAMP=$( date +%s )
 DASH_LIB_NAME='react-dash'
+SED="sed"
+if [ "$(uname)" == "Darwin" ]; then
+  SED="./bin/gsed"
+fi
+echo $SED
 
 # make a backup directory
 if [ ! -d backups ]; then
@@ -27,7 +32,7 @@ find src -type f -exec perl -p -i -e "s/\.\.\/src(.*)/$DASH_LIB_NAME'/g" {} \;
 #find src -type f -exec perl -p -i -e "s/import(.*)from 'react-dash'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 #find src -type f -exec sed -i -E "s/import(.*)from '$DASH_LIB_NAME'/import {\1} from '$DASH_LIB_NAME'/g" {} \;
 # rewrite "{ { library } }" as "{ library }"
-find src -type f -exec bin/sed -i -E "s/\{ \{(.*)\} \}/\1/g" {} \; 
+find src -type f -exec $SED -i -E "s/\{ \{(.*)\} \}/\1/g" {} \; 
 
 # move resources to src folder
 find src -type f -exec grep "$DASH_LIB_NAME" {} \;
