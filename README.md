@@ -1,3 +1,13 @@
+## Description
+A good starting place for react-dash standalone development.
+See https://react-dashboard.readthedocs.io/en/latest/ for react-dash documentation.
+**NOTE** If you are using DKAN - you probably want:
+
+https://github.com/NuCivic/dkan_dash
+https://github.com/NuCivic/custom_dash
+
+These modules provide dkan api integration and drupal integration.
+
 ## Requirements
 - nodejs
 - webpack
