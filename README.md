@@ -6,6 +6,7 @@ See https://react-dashboard.readthedocs.io/en/latest/ for react-dash documentati
 **NOTE** If you are using DKAN - you probably want:
 
 https://github.com/NuCivic/dkan_dash
+
 https://github.com/NuCivic/custom_dash
 
 
